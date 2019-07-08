@@ -3,7 +3,14 @@
 #npm run build creates an optimized production build
 FROM mhart/alpine-node:11 AS builder
 WORKDIR /app
+
+# Installing dependencies
+COPY package.json ./
+COPY package-lock.json ./
+RUN npm install
+RUN npm install antd
 COPY . .
+
 RUN yarn run build
 
 #Second stage of the build
