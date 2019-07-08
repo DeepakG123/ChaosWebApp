@@ -5,7 +5,7 @@ import { PageHeader, Carousel } from 'antd';
 function Homepage() {
   return (
     <div className="Homepage">
-    <PageHeader title="Surge" subTitle="About our Product" />
+    <PageHeader title="SURGE" subTitle="About our Product" />
     </div>
   );
 }
