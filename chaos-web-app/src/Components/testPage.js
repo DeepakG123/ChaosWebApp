@@ -1,14 +1,13 @@
 import React from 'react';
 import 'antd/dist/antd.css';
 import { Layout, Menu, Breadcrumb } from 'antd';
-import testPage from "./testPage";
 import { Link } from 'react-router-dom';
 
 const { Header, Content, Footer } = Layout;
 
-function Homepage() {
+function testPage() {
   return (
-    <div className="Homepage">
+    <div className="testPage">
 
       <Layout className="layout">
         <Header>
@@ -16,7 +15,7 @@ function Homepage() {
           <Menu
             theme="dark"
             mode="horizontal"
-            defaultSelectedKeys={['']}
+            defaultSelectedKeys={['2']}
             style={{ lineHeight: '64px' }}
           >
             <Menu.Item key="1">nav 1</Menu.Item>
@@ -33,7 +32,7 @@ function Homepage() {
             <Breadcrumb.Item>App</Breadcrumb.Item>
           </Breadcrumb>
           <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
-          The FitnessGram™ Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter pacer test will begin in 30 seconds. Line up at the start. The running speed starts slowly, but gets faster each minute after you hear this signal. [beep] A single lap should be completed each time you hear this sound. [ding] Remember to run in a straight line, and run as long as possible. The second time you fail to complete a lap before the sound, your test is over. The test will begin on the word start. On your mark, get ready, start.
+          Hello WORLD!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
           </div>
         </Content>
         <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
@@ -43,4 +42,4 @@ function Homepage() {
       );
     }
 
-export default Homepage;
+export default testPage;
