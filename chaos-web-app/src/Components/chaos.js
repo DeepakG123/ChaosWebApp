@@ -1,17 +1,19 @@
 import React from 'react';
 import 'antd/dist/antd.css';
-import { Layout, Menu, Breadcrumb } from 'antd';
+import { Layout, Menu } from 'antd';
 import { Link } from 'react-router-dom';
 
 const { Header, Content, Footer } = Layout;
 
-function testPage() {
+function chaos() {
   return (
-    <div className="testPage">
+    <div className="chaos">
 
       <Layout className="layout">
         <Header>
-          <div className="logo" />
+        <div className="logo">
+            <h1 style={{ color: '#fff' }} >SURGE</h1>
+        </div>
           <Menu
             theme="dark"
             mode="horizontal"
@@ -22,17 +24,15 @@ function testPage() {
               <Link to="/">home</Link>
             </Menu.Item>
             <Menu.Item key="2">
-              <Link to="/testPage">test</Link>
+              <Link to="/chaos">chaos</Link>
             </Menu.Item>
             <Menu.Item key="3">nav 3</Menu.Item>
           </Menu>
         </Header>
         <Content style={{ padding: '0 50px' }}>
-          <Breadcrumb style={{ margin: '16px 0' }}>
-            <Breadcrumb.Item>Home</Breadcrumb.Item>
-            <Breadcrumb.Item>List</Breadcrumb.Item>
-            <Breadcrumb.Item>App</Breadcrumb.Item>
-          </Breadcrumb>
+        <div style={{ margin: '30px 0', textAlign: "center" }}>
+          <h1>Testing 123!!</h1>
+        </div>
           <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
           Hello WORLD!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
           </div>
@@ -44,4 +44,4 @@ function testPage() {
       );
     }
 
-export default testPage;
+export default chaos;
