@@ -18,7 +18,9 @@ function testPage() {
             defaultSelectedKeys={['2']}
             style={{ lineHeight: '64px' }}
           >
-            <Menu.Item key="1">nav 1</Menu.Item>
+            <Menu.Item key="1">
+              <Link to="/">home</Link>
+            </Menu.Item>
             <Menu.Item key="2">
               <Link to="/testPage">test</Link>
             </Menu.Item>
