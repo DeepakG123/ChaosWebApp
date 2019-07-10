@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 
 const { Header, Content, Footer } = Layout;
 
-function chaos() {
+function technologies() {
   return (
-    <div className="chaos">
+    <div className="technologies">
 
       <Layout className="layout">
         <Header>
@@ -17,7 +17,7 @@ function chaos() {
           <Menu
             theme="dark"
             mode="horizontal"
-            defaultSelectedKeys={['2']}
+            defaultSelectedKeys={['3']}
             style={{ lineHeight: '64px' }}
           >
            <Menu.Item key="1">
@@ -36,10 +36,10 @@ function chaos() {
         </Header>
         <Content style={{ padding: '0 50px' }}>
         <div style={{ margin: '30px 0', textAlign: "center" }}>
-          <h1>Chaos Engineering</h1>
+          <h1>Technologies</h1>
         </div>
           <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
-          Hello WORLD!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+          Docker and Cloud9 and React! (oh my!)
           </div>
         </Content>
         <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
@@ -49,4 +49,4 @@ function chaos() {
       );
     }
 
-export default chaos;
+export default technologies;
