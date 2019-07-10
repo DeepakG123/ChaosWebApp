@@ -24,7 +24,7 @@ function team() {
               <Link to="/">About</Link>
             </Menu.Item>
             <Menu.Item key="2">
-              <Link to="/chaos">Chaos Engineering</Link>
+              <Link to="/surge">Why SURGE</Link>
             </Menu.Item>
             <Menu.Item key="3">
               <Link to="/technologies">Technologies</Link>
@@ -39,7 +39,22 @@ function team() {
           <h1>Team</h1>
         </div>
           <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
-          We the bestest team at Booz Allen!
+          The Chaos team consistsof five hardworking interns and two fabulous challenge leaders <br></br> <br></br>
+          <b><i>TEAM</i></b>
+          <p>
+              <br></br>
+              <i><u>INTERNS</u></i>
+              <br></br>
+              Priyanka Bitra<br></br>
+              Joseph Kim<br></br>
+              Ahmad Abushaban<br></br>
+              Adal Santana<br></br>
+              Deepak Goel<br></br><br></br>
+              <i><u>CHALLENGE LEADERS</u></i>
+              <br></br>
+              Ashley Mondres, Lead Associate<br></br>
+              Kirsten Guillaume, Senior Associate<br></br>
+          </p>
           </div>
         </Content>
         <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>

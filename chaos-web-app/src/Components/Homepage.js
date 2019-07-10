@@ -3,6 +3,7 @@ import 'antd/dist/antd.css';
 import { Layout, Menu } from 'antd';
 import { Link } from 'react-router-dom';
 import MenuItem from 'antd/lib/menu/MenuItem';
+// import fire from 'Components/firebase.js';
 
 const { Header, Content, Footer } = Layout;
 
@@ -25,7 +26,7 @@ function Homepage() {
               <Link to="/">About</Link>
             </Menu.Item>
             <Menu.Item key="2">
-              <Link to="/chaos">Chaos Engineering</Link>
+              <Link to="/surge">Why SURGE</Link>
             </Menu.Item>
             <Menu.Item key="3">
               <Link to="/technologies">Technologies</Link>
@@ -40,7 +41,21 @@ function Homepage() {
             <h1>Hello Booz Allen!</h1>
           </div>
           <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
-          Greetings from the Chaos Team! This app will tell you all about our product we are calling SURGE! To learn more about the different aspects of our project
+          Greetings from the Chaos Team! This web app will tell you all about our product that we are calling SURGE! 
+          To learn more about the different aspects of our project, click through the tabs above.
+          <br></br><br></br>
+          <b><i>VISION STATEMENT</i></b>
+          <br></br>
+          <p>Our client, Ashley needs reliable servers. SURGE will be a Chaos as a Service (CaaS) platform, 
+            that will increase the resiliency of distributed systems by exposing server weaknesses. 
+            Unlike Gremlin, our product will be well packages and easy to integrate with existing architecture and use for non-technical users.</p>
+          <br></br>
+          <b><i>CHAOS ENGINEERING</i></b>
+          <p><i>What is it?</i>
+          <br></br>
+          Chaos Engineering is a discipline of experimenting on a software system in order to expose weaknesses and build
+          in a system's ability to withstand unexpected conditions. It was started by Netflix when switching to cloud infrastructure in 2011. 
+          Other options for chaos include Simian Army (open source, includes chaosmonkey), Gremlin, Pumba, Chaostoolkit, etc.</p>
           </div>
         </Content>
         <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
@@ -51,3 +66,4 @@ function Homepage() {
     }
 
 export default Homepage;
+
