@@ -15,7 +15,7 @@ function App() {
         <Route exact path="/surge" component={surge}></Route>
         <Route exact path="/technologies" component={technologies}></Route>
         <Route exact path="/team" component={team}></Route>
-      </Router>"
+      </Router>
     </div>
   );
 }

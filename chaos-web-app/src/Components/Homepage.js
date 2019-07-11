@@ -3,18 +3,38 @@ import 'antd/dist/antd.css';
 import { Layout, Menu } from 'antd';
 import { Link } from 'react-router-dom';
 import MenuItem from 'antd/lib/menu/MenuItem';
-// import fire from 'Components/firebase.js';
+import firebase from "firebase";
 
 const { Header, Content, Footer } = Layout;
 
 function Homepage() {
+  
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBT3sRryVV0APlRS9Hcqb6-LsgcSSSdw4g",
+    authDomain: "caas-a3e3c.firebaseapp.com",
+    databaseURL: "https://caas-a3e3c.firebaseio.com",
+    projectId: "caas-a3e3c",
+    storageBucket: "",
+    messagingSenderId: "170546946739",
+    appId: "1:170546946739:web:71f357a88b071e0b"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  
+  // Grabbing from firebase, see results in browser console (F12)
+  var root = firebase.database().ref("/");
+  root.on("value", snapshot => {
+    console.log(snapshot.val());
+  });
+
   return (
     <div className="Homepage">
 
       <Layout className="layout">
         <Header>
           <div className="logo">
-            <h1 style={{ color: '#fff' }} >SURGE</h1>
+            <h1 style={{ color: '#fff' }}>SURGE</h1>
           </div>
           <Menu
             theme="dark"
