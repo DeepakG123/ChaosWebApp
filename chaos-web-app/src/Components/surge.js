@@ -39,14 +39,14 @@ function surge() {
           <h1>Why Use SURGE?</h1>
         </div>
           <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
-          <p>This app was created by the Booz Allen Hamilton Chaos Team as a part of the 2019 Summer Games. The task assigned is as follows below</p>
+          <p>This app was created by the Booz Allen Hamilton Chaos Team as a part of the 2019 Summer Games. The task assigned is as follows below!</p>
           <br></br>
           <b><i>SURGE</i></b>
           <br></br>
           <p>All systems experience downtime, sometimes planned, sometimes very unexpected. Systems are often complex and lack comprehensive testing,
-            lending themselves to eventual outages. The emerginf field of Chaos Engineering serves up the unexpected in order to create more resilient systems. 
+            lending themselves to eventual outages. The emerging field of Chaos Engineering serves up the unexpected in order to create more resilient systems. 
             Rigorous, yet chaotic experimentation, based in automated, random, and intentional faults, help to identify areas to address, usually the areas
-            that have a high potential for failure. This challenge embraces the "what happens if" of Choas Engineering, but focuses on the "as a Service"
+            that have a high potential for failure. This challenge embraces the "what happens if" of Chaos Engineering, but focuses on the "as a Service"
             model. The team will look for ways to offer CaaS capabilities and services to help other companies chart a path to improved readiness. In short,
             the project will challenge the team to design, develop, and demonstrate a CaaS prototype. 
           </p>

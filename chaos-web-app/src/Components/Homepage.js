@@ -1,32 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import 'antd/dist/antd.css';
 import { Layout, Menu } from 'antd';
 import { Link } from 'react-router-dom';
 import MenuItem from 'antd/lib/menu/MenuItem';
-import firebase from "firebase";
+import fir from '../Components/firebase.js'
 
 const { Header, Content, Footer } = Layout;
 
 function Homepage() {
-  
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyBT3sRryVV0APlRS9Hcqb6-LsgcSSSdw4g",
-    authDomain: "caas-a3e3c.firebaseapp.com",
-    databaseURL: "https://caas-a3e3c.firebaseio.com",
-    projectId: "caas-a3e3c",
-    storageBucket: "",
-    messagingSenderId: "170546946739",
-    appId: "1:170546946739:web:71f357a88b071e0b"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+
+  const [stuff, setStuff] = useState();
+  let x, y;
   
   // Grabbing from firebase, see results in browser console (F12)
-  var root = firebase.database().ref("/");
-  root.on("value", snapshot => {
-    console.log(snapshot.val());
-  });
+    var root = fir.database().ref("/");
+    root.on("value", snapshot => {
+      console.log(snapshot.val());
+      let x = snapshot.val();
+    });
+
+    for (var key in x) {
+      if (x.hasOwnProperty(key)) {
+        y.push(x[key])
+      }
+    }
+
 
   return (
     <div className="Homepage">
@@ -58,7 +56,8 @@ function Homepage() {
         </Header>
         <Content style={{ padding: '0 50px' }}>
           <div style={{ margin: '30px 0', textAlign: "center" }}>
-            <h1>Hello Booz Allen!</h1>
+            {/* <h1>Hello Booz Allen!</h1> */}
+            <h1>{stuff}</h1>
           </div>
           <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
           Greetings from the Chaos Team! This web app will tell you all about our product that we are calling SURGE! 
@@ -68,13 +67,13 @@ function Homepage() {
           <br></br>
           <p>Our client, Ashley needs reliable servers. SURGE will be a Chaos as a Service (CaaS) platform, 
             that will increase the resiliency of distributed systems by exposing server weaknesses. 
-            Unlike Gremlin, our product will be well packages and easy to integrate with existing architecture and use for non-technical users.</p>
+            Unlike Gremlin, our product will be well packaged and easy to integrate with existing architecture and use for non-technical users.</p>
           <br></br>
           <b><i>CHAOS ENGINEERING</i></b>
           <p><i>What is it?</i>
           <br></br>
           Chaos Engineering is a discipline of experimenting on a software system in order to expose weaknesses and build
-          in a system's ability to withstand unexpected conditions. It was started by Netflix when switching to cloud infrastructure in 2011. 
+          in a system's ability to withstand unexpected conditions. It was started by Netflix when they were switching to cloud infrastructure in 2011. 
           Other options for chaos include Simian Army (open source, includes chaosmonkey), Gremlin, Pumba, Chaostoolkit, etc.</p>
           </div>
         </Content>

@@ -39,7 +39,7 @@ function team() {
           <h1>Team</h1>
         </div>
           <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
-          The Chaos team consistsof five hardworking interns and two fabulous challenge leaders <br></br> <br></br>
+          The Chaos team consistsof five hardworking interns and two fabulous challenge leaders! <br></br> <br></br>
           <b><i>TEAM</i></b>
           <p>
               <br></br>
