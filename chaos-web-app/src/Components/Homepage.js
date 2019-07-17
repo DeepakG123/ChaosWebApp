@@ -9,21 +9,20 @@ const { Header, Content, Footer } = Layout;
 
 function Homepage() {
 
-  const [stuff, setStuff] = useState();
-  let x, y;
+  // const [stuff, setStuff] = useState();
+  // let x, y;
   
   // Grabbing from firebase, see results in browser console (F12)
     var root = fir.database().ref("/");
     root.on("value", snapshot => {
       console.log(snapshot.val());
-      let x = snapshot.val();
     });
 
-    for (var key in x) {
-      if (x.hasOwnProperty(key)) {
-        y.push(x[key])
-      }
-    }
+    // for (var key in x) {
+    //   if (x.hasOwnProperty(key)) {
+    //     y.push(x[key])
+    //   }
+    // }
 
 
   return (
@@ -56,8 +55,7 @@ function Homepage() {
         </Header>
         <Content style={{ padding: '0 50px' }}>
           <div style={{ margin: '30px 0', textAlign: "center" }}>
-            {/* <h1>Hello Booz Allen!</h1> */}
-            <h1>{stuff}</h1>
+            <h1>Hello Booz Allen!</h1>
           </div>
           <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
           Greetings from the Chaos Team! This web app will tell you all about our product that we are calling SURGE! 
